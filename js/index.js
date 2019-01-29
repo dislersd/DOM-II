@@ -62,8 +62,23 @@ function dragElement(elmnt) {
 const pArray = document.querySelectorAll('p');
 
 document.addEventListener('scroll', e => {
-  pArray.forEach( p => {
-    TweenMax.to(p, 1, {scale: 1.1,ease:Bounce.easeOut});
-  })
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    pArray.forEach( p => {
+      TweenMax.to(p, 1, {scale: 1.2,ease:Bounce.easeOut});
+    })
+  } else {
+    pArray.forEach( p => {
+      TweenMax.to(p, 1, {scale: 1, ease:Bounce.easeOut});
+    })
+  }
 })
+
+const h2Array = document.querySelectorAll('h2');
+
+h2Array.forEach( elem => {
+  elem.addEventListener('dblclick', e => {
+    TweenMax.to(e.currentTarget, 1, {scale: 2,ease:Bounce.easeOut});
+  });
+});
+
 
