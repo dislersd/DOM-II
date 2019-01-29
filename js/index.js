@@ -99,4 +99,12 @@ input.addEventListener('focus', e => {
   input.style.background = 'orange'
 })
 
+input.addEventListener('onchange', e => {
+  input.style.background = 'pink'
+})
 
+const radio = document.myForm.buttons;
+
+document.addEventListener('click', e => {
+  document.body.style.background = 'blue'
+})
