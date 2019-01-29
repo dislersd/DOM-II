@@ -81,4 +81,6 @@ h2Array.forEach( elem => {
   });
 });
 
-
+document.addEventListener('keydown', e => {
+  document.querySelector('h1').style.color = 'purple';
+})
