@@ -77,7 +77,7 @@ const h2Array = document.querySelectorAll('h2');
 
 h2Array.forEach( elem => {
   elem.addEventListener('dblclick', e => {
-    TweenMax.to(e.currentTarget, 1, {scale: 2,ease:Bounce.easeOut});
+    TweenMax.to(e.currentTarget, 1, {scale: 2,ease:Bounce.easeOut, x: 300});
   });
 });
 
@@ -87,5 +87,9 @@ document.addEventListener('keydown', e => {
 
 document.addEventListener('keyup', e => {
   document.querySelector('h1').style.color = 'black';
+})
+
+window.addEventListener('load', e => {
+  alert('everything loaded!');
 })
 
