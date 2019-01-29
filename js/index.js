@@ -15,16 +15,16 @@ imgArray.forEach( elem => {
 });
 
 
-// Make the DIV element draggable:
-dragElement(document.getElementById("logo-heading"));
+// Make the h1 element draggable:
+dragElement(document.getElementById("dragtarget"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   if (document.getElementById(elmnt.id + "header")) {
-    // if present, the header is where you move the DIV from:
+  // if present, the header is where you move the h1 from:
     document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
   } else {
-    // otherwise, move the DIV from anywhere inside the DIV: 
+  // otherwise, move the h1 from anywhere inside the h1: 
     elmnt.onmousedown = dragMouseDown;
   }
 
@@ -58,4 +58,12 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+
+const pArray = document.querySelectorAll('p');
+
+document.addEventListener('scroll', e => {
+  pArray.forEach( p => {
+    TweenMax.to(p, 1, {scale: 1.1,ease:Bounce.easeOut});
+  })
+})
 
