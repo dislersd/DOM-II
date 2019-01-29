@@ -195,8 +195,14 @@ img {
     padding-top: 10px;
   }
 }
+.main-navigation .nav-container #logo-heading {
+  position: absolute;
+  bottom: 20px;
+  cursor: move;
+  z-index: 11;
+}
 @media (max-width: 500px) {
-  .main-navigation .nav-container .logo-heading {
+  .main-navigation .nav-container #logo-heading {
     font-size: 3rem;
   }
 }
