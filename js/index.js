@@ -93,3 +93,10 @@ window.addEventListener('load', e => {
   alert('everything loaded!');
 })
 
+const input = document.querySelector('input');
+
+input.addEventListener('focus', e => {
+  input.style.background = 'orange'
+})
+
+
