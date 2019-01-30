@@ -4,6 +4,7 @@
   background: @main-bg;
   border-bottom: 2px dashed @navigation-border;
   position: fixed;
+  z-index: 10;
 
   .nav-container {
     height: 100%;
@@ -17,10 +18,14 @@
       padding-top: 10px;
     }
 
-    .logo-heading {
+    #dragtarget {
       @media @mobile {
         font-size: 3rem;
       }
+      position: absolute;
+      bottom: 20px;
+      cursor: move;
+      z-index: 11;
     }
 
     .nav {
