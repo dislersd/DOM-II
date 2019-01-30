@@ -103,8 +103,26 @@ input.addEventListener('onchange', e => {
   input.style.background = 'pink'
 })
 
-const radio = document.myForm.buttons;
+const form = document.querySelector('form')
 
-document.addEventListener('click', e => {
-  document.body.style.background = 'blue'
+form.addEventListener('click', e => {
+  document.body.style.display = 'none'
+})
+
+document.querySelector('a').addEventListener('click', e => {
+  e.preventDefault();
+})
+
+
+const footer = document.querySelector('footer');
+const footP = document.querySelector('footer p');
+console.log(footP);
+
+footer.addEventListener('click', e => {
+  footer.style.background = 'red';
+})
+
+footP.addEventListener('click', e => {
+  footP.style.background = 'blue';
+  e.stopPropagation();
 })

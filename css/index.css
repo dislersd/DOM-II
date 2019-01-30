@@ -232,6 +232,8 @@ img {
   color: #212529;
   font-size: 1.6rem;
   padding: 20px;
+  width: 200px;
+  margin: 0 auto;
 }
 .home .intro {
   padding: 90px 0 10px;
